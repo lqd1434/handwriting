@@ -1,4 +1,7 @@
-
+/**
+ * 数组打平函数
+ * @param arr
+ */
 export const flat = (arr:any[])=>{
 	const tempList: any[] = []
 	if (!Array.isArray(arr)){
