@@ -3,14 +3,14 @@
  * @param arr
  * @param excludeArr
  */
-export const difference = (arr:any[],excludeArr:any[])=>{
-	return arr.filter((item)=>{
-		let flag = true
-		for (let i = 0; i < excludeArr.length; i++) {
-			if (item === excludeArr[i]){
-				flag = false
-			}
-		}
-		return flag
-	})
-}
+export const difference = (arr: any[], excludeArr: any[]) => {
+  return arr.filter((item) => {
+    let flag = true;
+    for (let i = 0; i < excludeArr.length; i++) {
+      if (item === excludeArr[i]) {
+        flag = false;
+      }
+    }
+    return flag;
+  });
+};
