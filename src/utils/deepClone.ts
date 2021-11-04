@@ -1,8 +1,7 @@
 /**
  * 深拷贝
+ * @param sourceObj
  */
-
-
 export const deepClone = (sourceObj:any)=>{
 	if (!(typeof sourceObj === 'object')) return sourceObj
 	const objType = Object.prototype.toString.call(sourceObj)
