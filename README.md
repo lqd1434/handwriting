@@ -1,9 +1,9 @@
 <img width="120"/><img src="https://img.icons8.com/nolan/100/hardworking--v1.png"/>
 
-#手写实现js常用方法:tada: :tada:
+# 手写实现js常用方法:tada: :tada:
 <br/>
 
-# 一.数组方法
+## 一.数组方法
 
 ### 1.flat
 
@@ -60,7 +60,7 @@ export const findIndex = (arr: any[], ele: Object) => {
 };
 ```
 
-# 二.对象方法
+## 二.对象方法
 ### 1.deepClone
 :label:对象深拷贝
 ```typescript
