@@ -1,4 +1,4 @@
-import { deepEqual } from '../utils/Object/isEqual';
+import { deepEqual } from '../utils/Object/deepEqual';
 
 console.warn('------deepEqual测试结果------');
 

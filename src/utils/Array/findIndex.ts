@@ -1,4 +1,4 @@
-import { deepEqual } from '../Object/isEqual';
+import { deepEqual } from '../Object/deepEqual';
 
 export const findIndex = (arr: any[], ele: Object) => {
   if (typeof ele !== 'object' || !Array.isArray(arr)) return;
