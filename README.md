@@ -5,7 +5,8 @@
 
 # 一.数组方法
 
-###1.flat
+### 1.flat
+
 :label:数组打平函数,支持多嵌套
 ```typescript
     export const flat = (arr:any[])=>{
@@ -26,7 +27,7 @@
 }
 ```
 
-###2.difference
+### 2.difference
 :label:去除数组中指定的元素值
 ```typescript
 export const difference = (arr: any[], excludeArr: any[]) => {
@@ -42,7 +43,7 @@ export const difference = (arr: any[], excludeArr: any[]) => {
 };
 ```
 
-###3.findIndex
+### 3.findIndex
 :label:找到对象数组中某个对象的位置下标
 ```typescript
 export const findIndex = (arr: any[], ele: Object) => {
@@ -60,7 +61,7 @@ export const findIndex = (arr: any[], ele: Object) => {
 ```
 
 # 二.对象方法
-###1.deepClone
+### 1.deepClone
 :label:对象深拷贝
 ```typescript
 export const deepClone = (sourceObj: any) => {
@@ -97,7 +98,7 @@ export const deepClone = (sourceObj: any) => {
 };
 ```
 
-###2.deepEqual
+### 2.deepEqual
 :label:对象深比较
 ```typescript
 export const deepEqual = (obj1: Object, obj2: Object) => {
