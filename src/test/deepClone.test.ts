@@ -1,4 +1,4 @@
-import {deepClone} from "../utils/deepClone";
+import {deepClone} from "../utils/Object/deepClone";
 
 const divEle = document.createElement('div')
 divEle.setAttribute('id','hello')
@@ -15,6 +15,6 @@ const testObj = {
 
 const res = deepClone(testObj)
 
-console.info('------deepClone测试结果------')
+console.warn('------deepClone测试结果------')
 console.log(res)
 console.log(res === testObj)
