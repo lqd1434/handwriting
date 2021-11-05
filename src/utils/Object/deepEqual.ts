@@ -1,5 +1,8 @@
 export const deepEqual = (obj1: Object, obj2: Object) => {
   let flag = false;
+  if (Object.keys(obj1).length === 0 && Object.keys(obj2).length === 0) {
+    return true;
+  }
   for (const key in obj1) {
     if (key in obj2) {
       if (typeof obj1[key] === 'object') {
