@@ -1,5 +1,5 @@
 import { difference } from '../utils/Array/difference';
 
-const res = difference([1, 2, 3, 4], [1, 3]);
-console.warn('------difference测试结果------');
-console.log(res);
+test('------difference测试结果------', () => {
+  expect(difference([1, 2, 3, 4], [1, 3])).toStrictEqual([2, 4]);
+});
