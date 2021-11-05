@@ -1,4 +1,4 @@
-import { JudgmentType, TypeEnums } from '../extra/judgment';
+import { JudgmentType, TypeEnums } from '../utils/judgment';
 import { deepEqual } from '../Object/deepEqual';
 
 export const compactFalse = (arr: any[]) => {

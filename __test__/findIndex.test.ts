@@ -1,4 +1,4 @@
-import { findIndex } from '../src/utils/Array/findIndex';
+import { findIndex } from '../src/Array/findIndex';
 
 const arr = [
   { name: '2', age: 101 },

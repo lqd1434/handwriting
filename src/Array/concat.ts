@@ -1,4 +1,4 @@
-import { JudgmentType, TypeEnums } from '../extra/judgment';
+import { JudgmentType, TypeEnums } from '../utils/judgment';
 
 export const concat = (sourceArr: any[], ...values) => {
   const newArr: any[] = [...sourceArr];

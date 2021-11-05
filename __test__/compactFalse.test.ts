@@ -1,4 +1,4 @@
-import { compactFalse } from '../src/utils/Array/compactFalse';
+import { compactFalse } from '../src/Array/compactFalse';
 
 const arr = [1, 0, 2, '', null, undefined, {}, NaN, []];
 test('------compactFalse测试结果------', () => {

@@ -1,4 +1,4 @@
-import { deepEqual } from '../src/utils/Object/deepEqual';
+import { deepEqual } from '../src/Object/deepEqual';
 
 const obj1 = { name: 'lqd', age: 100, obj: { id: 1 } };
 const obj2 = { name: 'lqd', age: 100, obj: { id: 1 } };

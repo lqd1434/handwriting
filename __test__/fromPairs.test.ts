@@ -1,4 +1,4 @@
-import { fromPairs } from '../src/utils/Array/fromPairs';
+import { fromPairs } from '../src/Array/fromPairs';
 
 const arr = [
   ['a', 1],

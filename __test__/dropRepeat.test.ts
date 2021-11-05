@@ -1,4 +1,4 @@
-import { dropRepeat } from '../src/utils/Array/dropRepeat';
+import { dropRepeat } from '../src/Array/dropRepeat';
 
 const arr = [1, 2, 2, 3, 3, 4];
 

@@ -1,4 +1,4 @@
-import { flattenDepth } from '../src/utils/Array/flattenDepth';
+import { flattenDepth } from '../src/Array/flattenDepth';
 
 const arr = [1, [2, 3, [4, [5]]], 9];
 

@@ -1,4 +1,4 @@
-import { flat } from '../src/utils/Array/flat';
+import { flat } from '../src/Array/flat';
 
 const arr = [1, 2, [3, 4, 5, [6, 7]]];
 

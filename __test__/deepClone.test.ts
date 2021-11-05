@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { deepClone } from '../src/utils/Object/deepClone';
+import { deepClone } from '../src/Object/deepClone';
 
 const divEle = document.createElement('div');
 divEle.setAttribute('id', 'hello');
