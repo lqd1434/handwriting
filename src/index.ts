@@ -10,3 +10,4 @@ import './test/generateArr.test';
 import './test/flattenDepth.test';
 import './test/fromPairs.test';
 import './test/dropRepeat.test';
+import './test/dropRepeatDepth.test';
