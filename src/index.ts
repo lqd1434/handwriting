@@ -8,3 +8,4 @@ import './test/compactFalse.test';
 import './test/concat.test';
 import './test/generateArr.test';
 import './test/flattenDepth.test';
+import './test/fromPairs.test';
