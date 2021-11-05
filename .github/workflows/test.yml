@@ -24,4 +24,4 @@ jobs:
     - name: test
       run: |
         echo start test
-        jest
+        yarn test
