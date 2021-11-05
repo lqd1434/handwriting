@@ -9,6 +9,5 @@ const obj4 = { name: '1', age: 100 };
 
 const res1 = deepEqual(obj1, obj2);
 const res2 = deepEqual(obj3, obj4);
-
 console.log(res1);
 console.log(res2);
