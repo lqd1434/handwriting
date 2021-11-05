@@ -16,9 +16,12 @@ jobs:
       with:
         node-version: '14.x'
 
-    - name: install and test
+    - name: install
       run: |
         echo install dependencies
         yarn
+
+    - name: test
+      run: |
         echo start test
         jest
