@@ -4,3 +4,4 @@ import './test/deepClone.test';
 import './test/findIndex.test';
 import './test/deepEqual.test';
 import './test/chunk.test';
+import './test/compactFalse.test';
