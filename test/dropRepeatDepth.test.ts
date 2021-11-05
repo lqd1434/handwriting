@@ -1,4 +1,4 @@
-import { dropRepeatDepth } from '../utils/Array/dropRepeatDepth';
+import { dropRepeatDepth } from '../src/utils/Array/dropRepeatDepth';
 
 const arr = [1, 2, 2, { a: 1 }, { a: 1 }, [1], [1]];
 
