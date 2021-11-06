@@ -1,7 +1,9 @@
-<img width="120"/><img src="https://img.icons8.com/nolan/100/hardworking--v1.png"/>
+<p align="center">
+    <img src="https://img.icons8.com/nolan/300/hardworking--v1.png"/>
+</p>
 
-# 手写实现js常用方法:tada: :tada:
-本项目采用jest测试
+<h1 align="center">手写实现js常用方法</h1>
+
 <br/>
 
 ## 一.数组方法
