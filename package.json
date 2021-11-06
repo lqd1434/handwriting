@@ -1,15 +1,15 @@
 {
   "name": "handwriting",
   "version": "1.0.0",
+  "author": "wonder",
+  "license": "ISC",
+  "description": "手写js常用方法",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "bulid": "webpack ",
     "dev": "webpack serve --open --config webpack.config.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
