@@ -1,9 +1,13 @@
 <p align="center">
     <img src="https://img.icons8.com/nolan/300/hardworking--v1.png"/>
 </p>
-
+<hr>
 <h1 align="center">手写实现js常用方法</h1>
-
+<p>
+    本项目采用<code>typescript</code>编写,另外加入了<code>jest</code>做测试,本项目仿照<code>lodash</code>上的方法,自己重新实现所得.项目初期类型会尽量采用any,
+    后面再根据实际确立更准确的类型,从而提供更友好的提示<br>
+    希望自己能在一次次的书写中获得提升,成为更好的自己!
+</p>
 <br/>
 
 ## 一.数组方法
