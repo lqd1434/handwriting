@@ -64,8 +64,12 @@ export function judgmentType(targetType: any) {
   return type;
 }
 
-class Judgment {
+export class Judgment {
   static isPrimitive = (source: any) => {
     return PrimitiveTypes.includes(judgmentType(source) as TypeEnums);
+  };
+
+  static isEle = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.Ele;
   };
 }
