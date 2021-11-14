@@ -72,4 +72,27 @@ export class Judgment {
   static isEle = (source: any) => {
     return (judgmentType(source) as TypeEnums) === TypeEnums.Ele;
   };
+
+  static isRegExp = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.RegExp;
+  };
+
+  static isDate = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.Date;
+  };
+
+  static isSet = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.Set;
+  };
+
+  static isMap = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.Map;
+  };
+
+  static isWeakMap = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.WeakMap;
+  };
+  static isWeakSet = (source: any) => {
+    return (judgmentType(source) as TypeEnums) === TypeEnums.WeakSet;
+  };
 }
