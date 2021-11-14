@@ -13,7 +13,6 @@ export const deepClone = (sourceObj: any) => {
   for (let key in sourceObj) {
     if (sourceObj.hasOwnProperty(key)) {
       if (!(key in targetObj)) {
-        //日期对象
         const type = judgmentType(sourceObj[key]);
         if (Judgment.isPrimitive(sourceObj[key])) {
           targetObj[key] = sourceObj[key];

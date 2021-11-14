@@ -60,7 +60,7 @@ export function judgmentType(targetType: any) {
       type = 'WeakMap';
       break;
   }
-  if (targetType.nodeType === 1) {
+  if (targetType?.nodeType === 1) {
     type = 'HTMLElement';
   }
   return type;
