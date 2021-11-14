@@ -14,7 +14,11 @@ export class MyPromise {
   onRejectedFunc: any[] = [];
 
   constructor(executor: ExecutorType) {
-    executor(this.resolve, this.reject);
+    try {
+      executor(this.resolve, this.reject);
+    } catch (e) {
+      this.reject(e);
+    }
   }
 
   resolve = (value: any) => {
@@ -38,16 +42,44 @@ export class MyPromise {
   };
 
   then(onFulfilled, onRejected?) {
-    if (this.state === Status.PENDING) {
-      this.onFulfilledFunc.push(() => onFulfilled(this.fulfilledValue));
-      this.onRejectedFunc.push(() => onRejected(this.reason));
-    }
-    if (this.state === Status.FULFILLED) {
-      onFulfilled(this.fulfilledValue);
-    }
-
-    if (this.state === Status.REJECTED) {
-      onRejected(this.reason);
-    }
+    return new MyPromise((resolve, reject) => {
+      switch (this.state) {
+        case Status.FULFILLED:
+          try {
+            //.then若返回一个值接收等到下一个.then处理
+            let res = onFulfilled(this.fulfilledValue);
+            resolve(res);
+          } catch (e) {
+            reject(e);
+          }
+          break;
+        case Status.REJECTED:
+          try {
+            let x = onRejected(this.reason);
+            //.then若返回一个值接收等到下一个.then处理
+            resolve(x);
+          } catch (e) {
+            reject(e);
+          }
+          break;
+        default:
+          this.onFulfilledFunc.push(() => {
+            try {
+              let x = onFulfilled(this.fulfilledValue);
+              resolve(x);
+            } catch (e) {
+              reject(e);
+            }
+          });
+          this.onRejectedFunc.push(() => {
+            try {
+              let x = onRejected(this.reason);
+              resolve(x);
+            } catch (e) {
+              reject(e);
+            }
+          });
+      }
+    });
   }
 }
