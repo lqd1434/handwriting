@@ -32,12 +32,17 @@ export const deepClone = (sourceObj: any) => {
             case TypeEnums.Set:
               targetObj[key] = new Set([...sourceObj[key]]);
               break;
+            case TypeEnums.Map:
+              let tempMap = new Map();
+              for (const value of sourceObj[key]) {
+                tempMap.set(value[0], value[1]);
+              }
+              targetObj[key] = tempMap;
+              break;
             case TypeEnums.Obj:
-              console.log(key, '-------');
               targetObj[key] = deepClone(sourceObj[key]);
               break;
             case TypeEnums.Arr:
-              console.log(key, '-------');
               targetObj[key] = deepClone(sourceObj[key]);
               break;
           }

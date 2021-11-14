@@ -14,7 +14,8 @@ const testObj = {
   ele: divEle,
   arr: [1, 2, 3, 'a'],
   obj: { age: 20 },
-  setT: new Set([1, 2, 5])
+  setT: new Set([1, 2, 5]),
+  MapT: new Map([['a', 1]])
 };
 
 //注意数组也是对象,其键为index,值是index对应的值
@@ -25,6 +26,7 @@ test('------deepClone测试结果------', () => {
     ele: divEle,
     arr: [1, 2, 3, 'a'],
     obj: { age: 20 },
-    setT: new Set([1, 2, 5])
+    setT: new Set([1, 2, 5]),
+    MapT: new Map([['a', 1]])
   });
 });
