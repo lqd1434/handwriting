@@ -11,8 +11,8 @@ export enum TypeEnums {
   Ele = 'HTMLElement',
   RegExp = 'RegExp',
   Date = 'Date',
-  Set = 'Date',
-  Map = 'Date',
+  Set = 'Set',
+  Map = 'Map',
   WeakMap = 'WeakMap',
   WeakSet = 'WeakSet'
 }
@@ -31,7 +31,6 @@ export function judgmentType(targetType: any) {
   if (!(typeof targetType === 'object')) return typeof targetType as string;
   let type: string = '';
   const typeString = Object.prototype.toString.call(targetType);
-
   switch (typeString) {
     case '[object Object]':
       type = 'object';
@@ -42,31 +41,38 @@ export function judgmentType(targetType: any) {
     case '[object Null]':
       type = 'null';
       break;
-  }
-  if (type === 'object') {
-    if (targetType.nodeType === 1) {
-      type = 'HTMLElement';
-    } else if (targetType instanceof RegExp) {
-      type = 'RegExp';
-    } else if (targetType instanceof Date) {
-      type = 'Date';
-    } else if (targetType instanceof Set) {
+    case '[object Set]':
       type = 'Set';
-    } else if (targetType instanceof Map) {
+      break;
+    case '[object Map]':
       type = 'Map';
-    } else if (targetType instanceof WeakSet) {
+      break;
+    case '[object RegExp]':
+      type = 'RegExp';
+      break;
+    case '[object Date]':
+      type = 'Date';
+      break;
+    case '[object WeakSet]':
       type = 'WeakSet';
-    } else if (targetType instanceof WeakMap) {
+      break;
+    case '[object WeakMap]':
       type = 'WeakMap';
-    }
+      break;
   }
-
+  if (targetType.nodeType === 1) {
+    type = 'HTMLElement';
+  }
   return type;
 }
 
 export class Judgment {
   static isPrimitive = (source: any) => {
     return PrimitiveTypes.includes(judgmentType(source) as TypeEnums);
+  };
+
+  static isObj = (source: any) => {
+    return typeof source === 'object';
   };
 
   static isEle = (source: any) => {

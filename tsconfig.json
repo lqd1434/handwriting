@@ -6,7 +6,6 @@
       "ESNext",
       "dom"
     ],
-    "sourceMap": true,
     "moduleResolution": "node",
     "pretty": true,
     "declaration": true,
