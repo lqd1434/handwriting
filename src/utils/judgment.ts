@@ -9,12 +9,12 @@ export enum TypeEnums {
   Arr = 'array',
   Null = 'null',
   Ele = 'HTMLElement',
-  RegExp = 'RegExp',
-  Date = 'Date',
-  Set = 'Set',
-  Map = 'Map',
-  WeakMap = 'WeakMap',
-  WeakSet = 'WeakSet'
+  RegExp = 'regexp',
+  Date = 'date',
+  Set = 'set',
+  Map = 'map',
+  WeakMap = 'weakmap',
+  WeakSet = 'weakset'
 }
 
 const PrimitiveTypes = [
@@ -28,42 +28,14 @@ const PrimitiveTypes = [
 
 export function judgmentType(targetType: any) {
   //可分辨 number|string|function|symbol|undefined
-  if (!(typeof targetType === 'object')) return typeof targetType as string;
-  let type: string = '';
-  const typeString = Object.prototype.toString.call(targetType);
-  switch (typeString) {
-    case '[object Object]':
-      type = 'object';
-      break;
-    case '[object Array]':
-      type = 'array';
-      break;
-    case '[object Null]':
-      type = 'null';
-      break;
-    case '[object Set]':
-      type = 'Set';
-      break;
-    case '[object Map]':
-      type = 'Map';
-      break;
-    case '[object RegExp]':
-      type = 'RegExp';
-      break;
-    case '[object Date]':
-      type = 'Date';
-      break;
-    case '[object WeakSet]':
-      type = 'WeakSet';
-      break;
-    case '[object WeakMap]':
-      type = 'WeakMap';
-      break;
-  }
+  if (!(typeof targetType === 'object')) return typeof targetType as TypeEnums;
+  //判断object具体类型
+  let type: string;
+  type = Object.prototype.toString.call(targetType).slice(8, -1).toLowerCase();
   if (targetType?.nodeType === 1) {
     type = 'HTMLElement';
   }
-  return type;
+  return type as TypeEnums;
 }
 
 export class Judgment {
