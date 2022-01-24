@@ -1,5 +1,6 @@
 import { MyPromise } from './Promise';
 import { debounce } from './utils/debounce';
+import { mySetTimout } from './other/mySetTimout';
 
 const buttonEle = document.createElement('button');
 buttonEle.innerText = '按钮';
@@ -23,3 +24,7 @@ promise
   .then((value) => {
     console.log(value);
   });
+
+mySetTimout(() => {
+  console.log('setTimeout');
+}, 3000);
