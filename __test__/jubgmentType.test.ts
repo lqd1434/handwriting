@@ -1,4 +1,4 @@
-const { judgmentType } = require('../src/utils/judgment');
+import { judgmentType } from '../src/utils/judgment';
 
 const num = 1;
 const str = '1';
@@ -7,7 +7,7 @@ const symbol = Symbol('1');
 const func = function () {};
 const uni = undefined;
 const nul = null;
-const obj1 = {};
+const obj = {};
 const set = new Set();
 const weakSet = new WeakSet();
 const map = new Map();
@@ -23,7 +23,7 @@ test('------judgmentType测试结果------', () => {
   expect(judgmentType(func)).toStrictEqual('function');
   expect(judgmentType(uni)).toStrictEqual('undefined');
   expect(judgmentType(nul)).toStrictEqual('null');
-  expect(judgmentType(obj1)).toStrictEqual('object');
+  expect(judgmentType(obj)).toStrictEqual('object');
   expect(judgmentType(set)).toStrictEqual('set');
   expect(judgmentType(map)).toStrictEqual('map');
   expect(judgmentType(weakSet)).toStrictEqual('weakset');

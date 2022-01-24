@@ -15,6 +15,7 @@
     "noImplicitAny": false,
     "allowJs": true,
     "importHelpers": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
     "inlineSourceMap": true,
     "strict": true,
